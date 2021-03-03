@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+@import 'services';
+
+//variables
+$font-stack: 'Lato', sans-serif;
+$primary: #017D9E;
+$secondary: #7CD3EB;
+
+* {
+    font-family: $font-stack;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+.container{
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+body {
+    background: #f3f5f9a8;
+}
+
+
+//MAIN CONTENT NEXT TO SIDE BAR GOES IN MAIN CONTENT CLASS
+.wrapper {
+    text-align: center;
+    display: flex;
+    position: relative;
+    .main_content {
+        .logo{
+            padding-right: 350px;
+            top: 150px;
+            margin-top: 0px;
+            position: relative;
+            height: 375px;
+            width: 100%;
+
+        } img {
+            border-radius: 3%;
+            height: 425px;
+            width: 325px;
+        }
+        width: 100%;
+        margin-left: 200px;
+        .header {
+            height: 600px;
+            background: rgb(255,255,255);
+            background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(1,125,158,0.49343487394957986) 100%);
+            color: #717171;
+            border-bottom: 1px solid #e0e4e8;
+            
+            .greeting {
+                h1 {
+                    text-align: right;
+                }
+                justify-content: center;
+                padding-right: 0px;
+                padding-top: 0px;
+                width: 1180px;
+                margin: 0 auto;
+                .bar {
+                    text-align: right;
+                    color: white;
+                    height: 50px;
+                    width: 100%;
+                    background: $primary;
+                }
+            }
+        }
+        .info {
+            margin: 20px;
+            color: #717171b9;
+            line-height: 25px;
+            div {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    
+    
+    
+    // SIDE BAR STYLE
+    .sidebar {
+        position: fixed;
+        width: 200px;
+        height: 100%;
+        background: $primary;
+        padding: 30px 0;
+        h2{
+            color: #f3f5f9;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        ul {
+            li {
+                padding: 25px;
+                border-top: 1px solid $secondary;
+                transition: all ease-in-out .5s;
+                &:last-child {
+                border-bottom: 1px solid $secondary; 
+                }
+                &:hover {
+                    background: $secondary;
+                }
+                a {
+                color: white;  
+                  display: block;
+                .fas {
+                    width: 25px;
+                    padding-right: 15px;
+                }
+                }
+            }
+        }
+    }
+}
