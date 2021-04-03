@@ -98,7 +98,7 @@ body {
     height: 100vh;
     width: 100%;
     flex-direction: column;
-    clip-path: elipse(100px at 90% -15%);
+    clip-path: circle(100px at 90% -15%);
     -webkit-clip-path: circle(100px at 90% -15%);
     transition: all 1s ease-in-out;
     z-index: 4;
@@ -128,9 +128,18 @@ body {
     font-size: 25px;
   }
 }
+@media screen and (max-width: 576px) {
+  .navbar .nav-links {
+    clip-path: circle(100px at 120% -15%);
+    -webkit-clip-path: circle(100px at 120% -15%);
+  }
+}
 
 .landing .fab {
   font-size: 50px;
+}
+.landing .projectsheading {
+  background-color: #52b8ff;
 }
 .landing .home {
   transition: all 0.3s ease-in-out;
@@ -179,7 +188,7 @@ body {
   letter-spacing: 4px;
 }
 #services .container .box {
-  height: 300px;
+  height: 100%;
   background: rgba(255, 255, 255, 0);
   padding: 40px;
   transition: all 0.4s ease-in-out;
@@ -218,4 +227,8 @@ body {
 }
 #services .container .box.yellow {
   border-bottom: 2px solid #ffc853;
+}
+
+.projects .thumbnail img {
+  height: 200px;
 }
