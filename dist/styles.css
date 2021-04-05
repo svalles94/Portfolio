@@ -13,6 +13,10 @@ body {
   color: black;
 }
 
+.fixed-position {
+  position: fixed;
+}
+
 .navbar {
   align-items: center;
   display: flex;
@@ -67,6 +71,7 @@ body {
   list-style: none;
   color: black;
   display: inline-block;
+  padding-left: 0;
 }
 @media screen and (max-width: 768px) {
   .navbar .nav-links {
@@ -80,6 +85,11 @@ body {
   display: inline-block;
   color: black;
   z-index: 3;
+}
+@media screen and (max-width: 768px) {
+  .navbar .nav-links li {
+    padding-right: 0px;
+  }
 }
 .navbar .nav-links li a {
   text-decoration: none;

@@ -7,13 +7,15 @@ var circle = document.querySelector('.circle');
 var boxBlue = document.querySelector('.blue');
 var boxRed = document.querySelector('.red');
 var boxYellow = document.querySelector('.yellow');
-var home = document.querySelector('.home'); //Hamburger Menu 
+var home = document.querySelector('.home');
+var body = document.getElementsByTagName("BODY")[0]; //Hamburger Menu 
 
 hamburger.addEventListener('click', function () {
   navLinks.classList.toggle("open");
   links.forEach(function (link) {
     link.classList.toggle("fade");
   });
+  body.classList.toggle("fixed-position");
 }); // HOVER EFFECT FOR SERVICES MENU
 //blue circle hover effect
 

@@ -6,6 +6,7 @@ const boxBlue = document.querySelector('.blue');
 const boxRed = document.querySelector('.red');
 const boxYellow = document.querySelector('.yellow');
 const home = document.querySelector('.home');
+const body = document.getElementsByTagName("BODY")[0];
 
 //Hamburger Menu 
 hamburger.addEventListener('click', () => {
@@ -13,6 +14,7 @@ hamburger.addEventListener('click', () => {
     links.forEach(link => {
         link.classList.toggle("fade");
     })
+    body.classList.toggle("fixed-position");
 });
 
 // HOVER EFFECT FOR SERVICES MENU

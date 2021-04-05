@@ -1,6 +1,7 @@
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 const links = document.querySelectorAll('.nav-links li');
+const body = document.getElementsByTagName("BODY")[0];
 
 //Hamburger Menu 
 hamburger.addEventListener('click', () => {
@@ -8,6 +9,7 @@ hamburger.addEventListener('click', () => {
     links.forEach(link => {
         link.classList.toggle("fade");
     })
+    body.classList.toggle("fixed-position");
 });
 
 

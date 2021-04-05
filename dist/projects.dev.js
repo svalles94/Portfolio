@@ -2,13 +2,15 @@
 
 var hamburger = document.querySelector('.hamburger');
 var navLinks = document.querySelector('.nav-links');
-var links = document.querySelectorAll('.nav-links li'); //Hamburger Menu 
+var links = document.querySelectorAll('.nav-links li');
+var body = document.getElementsByTagName("BODY")[0]; //Hamburger Menu 
 
 hamburger.addEventListener('click', function () {
   navLinks.classList.toggle("open");
   links.forEach(function (link) {
     link.classList.toggle("fade");
   });
+  body.classList.toggle("fixed-position");
 }); //animations
 
 window.onload = function () {
